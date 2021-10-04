@@ -1,0 +1,5 @@
+#space "mana/lang"
+
+
+[special, readonly, forwarded]
+public struct Void : ValueType { }

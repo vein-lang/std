@@ -1,0 +1,12 @@
+#space "mana/lang"
+
+
+[special, forwarded]
+public struct ValueType
+{
+    [virtual]
+    public toString(): String
+    {
+        return "<Value>";
+    }
+}
