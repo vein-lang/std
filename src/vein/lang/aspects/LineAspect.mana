@@ -1,0 +1,7 @@
+#ignore
+
+#space "vein/lang/aspects"
+
+aspect Line(fo: Int64)
+{
+}

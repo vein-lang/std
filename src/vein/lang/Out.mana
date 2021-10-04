@@ -1,0 +1,8 @@
+#space "vein/lang"
+
+
+public static class Out
+{
+    [native("internal.h", "@_println")]
+    public extern static @_println(value: String): Void;
+}

@@ -1,0 +1,12 @@
+#space "vein/lang"
+
+
+[special, forwarded]
+public class Object
+{
+    [virtual]
+    public toString(): String
+    {
+        return "<Object>";
+    }
+}

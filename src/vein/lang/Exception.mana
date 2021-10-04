@@ -1,0 +1,8 @@
+#space "vein/lang"
+
+
+[special, forwarded]
+public class Exception : Object
+{
+    public message: String;
+}
