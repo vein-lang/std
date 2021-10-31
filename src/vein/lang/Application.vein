@@ -1,9 +1,8 @@
 #space "vein/lang"
 
-[native("internal.h")]
 public static class Application
 {
-    [native("internal.h", "@_get_os_value")]
+    [native("@_get_os_value")]
     private extern static @_get_os_value(): Int32;
     private extern static @_exit(msg: String, exitCode: Int32): Void;
     private extern static @_switch_flag(key: String, value: Boolean): Void;
