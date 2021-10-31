@@ -1,0 +1,7 @@
+#space "vein/lang"
+
+internal static class Sys
+{
+    [native("@value2string")]
+    public extern static toString(value: ValueType): String;
+}
