@@ -7,7 +7,7 @@ public class String : Object
     private _value: ValueType;
     //[native, getter]
     //public extern this[index: Int32]: Char;
-    [native, getter]
+    [native]
     public /*extern*/ Length: Int32;
     /*
     // temporary using vm_bridge, todo: rework to using mana-code
@@ -33,4 +33,9 @@ public class String : Object
     [native("@_fast_trim_end")]
     public static extern trimEnd(s: String): String;
     */
+
+    public override toString(): String
+    {
+        return Sys.toString(_value);
+    }
 }
