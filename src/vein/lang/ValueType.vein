@@ -7,6 +7,6 @@ public struct ValueType
     [virtual]
     public toString(): String
     {
-        return "<Value>";
+        return Sys.toString(this);
     }
 }
