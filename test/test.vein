@@ -1,0 +1,25 @@
+#space "test"
+
+#use "vein/lang"
+
+public interface Zetta
+{
+    public fobar(): Void;
+}
+
+public class Testable
+{
+    public static master(): Void
+    {
+        Out.@_println("function master()");
+        s1();
+        s1();
+    }
+
+    public static s1(): Void
+    {
+        auto lenOfSvackDick = 3.toString();
+        Out.@_println("Svack dick size: ");
+        Out.@_println(lenOfSvackDick);
+    }
+}
