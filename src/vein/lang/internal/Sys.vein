@@ -4,4 +4,7 @@ internal static class Sys
 {
     [native("@value2string")]
     public extern static toString(value: ValueType): String;
+
+    [native("@queryPerformanceCounter")]
+    public extern static queryPerformanceCounter(): Int64;
 }
