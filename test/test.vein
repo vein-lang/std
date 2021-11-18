@@ -2,24 +2,39 @@
 
 #use "vein/lang"
 
-public interface Zetta
-{
-    public fobar(): Void;
-}
-
 public class Testable
 {
     public static master(): Void
     {
-        Out.@_println("function master()");
-        s1();
+        auto d = new TimeSpan(45100000000l);
+        auto min = d.get_Minutes();
+        auto res = min.toString();
+        Out.@_println("get_Minutes: " + res);
+        fib(10);
         s1();
     }
 
+    public static fo: Int32 { get; set; }
+
     public static s1(): Void
     {
-        auto lenOfSvackDick = 3.toString();
-        Out.@_println("Svack dick size: ");
-        Out.@_println(lenOfSvackDick);
+        auto d = this.get_fo();
+        auto lenOfSvackDick = d.toString();
+        Out.@_println("Svack dick size: " + lenOfSvackDick);
+        auto result = fib(10);
+        auto res1 = result.toString();
+        Out.@_println("fib result: " + res1);
     }
+
+
+    public static fib(n: Int32): Int32
+    {
+        if (2 > n) 
+            return n;
+        auto n1 = fib(n - 1);
+        auto n2 = fib(n - 2);
+        return n1 + n2; 
+    }
+
+    public chain(): self |> this;
 }

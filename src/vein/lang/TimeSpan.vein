@@ -1,0 +1,38 @@
+#space "vein/lang"
+
+public class TimeSpan
+{
+    public TicksPerDay: Int64 = 864000000000L;
+    public TicksPerHour: Int64 = 36000000000L;
+    public TicksPerMinute: Int64 = 600000000L;
+    public TicksPerSecond: Int64 = 10000000L;
+    public TicksPerMillisecond: Int64 = 10000L;
+    //public SecondsPerTick: Float = 1E-07F; 
+
+
+    internal _ticks: Int64;
+
+    public Ticks: Int64 
+        |> _ticks;
+
+    public Days: Int64 
+        |> _ticks / TicksPerDay;
+
+    public Hours: Int64 
+        |> ((_ticks / TicksPerHour) % 24L);
+
+    public Milliseconds: Int64 
+        |> ((_ticks / TicksPerMillisecond) % 1000L);
+
+    public Minutes: Int64 
+        |> ((_ticks / TicksPerMinute) % 60L);
+
+    public Seconds: Int64 
+        |> ((_ticks / TicksPerSecond) % 60L);
+
+    //public TotalSeconds: Float 
+    //    |> _ticks * SecondsPerTick;
+
+    public new(ticks: Int64) 
+        |> this._ticks = ticks;
+}

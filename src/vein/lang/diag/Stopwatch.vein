@@ -1,3 +1,4 @@
+#ignore
 #space "vein/lang/diag"
 
 #use "vein/lang"
@@ -12,16 +13,16 @@ public class Stopwatch
     private isRunning: Boolean;
 
 
-    public static readonly Frequency: Int64;
-    public static readonly IsHighResolution: Boolean;
+    public static /*readonly*/ Frequency: Int64;
+    public static /*readonly*/ IsHighResolution: Boolean;
 
-    private static readonly tickFrequency: Float;
+    private static /*readonly*/ tickFrequency: Float;
 
     public Elapsed: TimeSpan 
     {
         get 
         {
-            auto s = Stopwatch.GetElapsedDateTimeTicks();
+            auto s = Sys.GetElapsedDateTimeTicks();
             return new TimeSpan(s); 
         }
     }

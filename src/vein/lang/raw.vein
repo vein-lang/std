@@ -1,0 +1,5 @@
+#space "vein/lang"
+
+
+[special, forwarded, native]
+internal struct raw {}

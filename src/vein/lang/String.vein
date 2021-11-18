@@ -4,7 +4,7 @@
 public class String : Object
 {
     [native("!!value")]
-    private _value: ValueType;
+    __value: raw;
     //[native, getter]
     //public extern this[index: Int32]: Char;
     [native]
@@ -36,7 +36,7 @@ public class String : Object
 
     public override toString(): String
     {
-        return Sys.toString(_value);
+        return Sys.toString(this);
     }
 
     [special]
