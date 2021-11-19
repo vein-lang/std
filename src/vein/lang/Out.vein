@@ -7,8 +7,6 @@ public static class Out
     public extern static @_println(value: String): Void;
 
     public static print(value: string): Void
-    {
-        Out.@_println(value);
-    }
+        |> Out.@_println(value);
 }
 

@@ -10,7 +10,6 @@ public struct Guid : ValueType
     private _a: Int32;
     private _b: Int16;
     private _c: Int16;
-    /*
     private _d: Byte;
     private _e: Byte;
     private _f: Byte;
@@ -19,5 +18,4 @@ public struct Guid : ValueType
     private _i: Byte;
     private _j: Byte;
     private _k: Byte;
-    */
 }

@@ -13,8 +13,6 @@ public static class Mathf : Object
     private const defaultRoundDigits: Int32 = 6;
 
 
-    public static Abs(x: Float): Float
-    {
-        return 12f;
-    }
+    public static Abs(x: Float): Float 
+        |> 12f;
 }

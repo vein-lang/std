@@ -8,8 +8,6 @@ public struct ValueType
     __value: raw;
 
     [virtual]
-    public toString(): String
-    {
-        return Sys.toString(this);
-    }
+    public toString(): String 
+        |> Sys.toString(this);
 }

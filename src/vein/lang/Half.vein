@@ -19,38 +19,28 @@ public struct Half : ValueType
     [getter]
     public static Epsilon: Half;
 
-    //// implicit getters
     /**
         Represents the smallest positive Half value that is greater than zero. 
     **/
     [special]
-    public get_Epsilon(): Half
-    {
-        return 5.9604645e-08h;
-    }
+    public Epsilon: Half
+        |> 5.9604645e-08h;
     /**
         Represents positive infinity.
     **/
     [special]
-    public get_PositiveInfinity(): Half 
-    {
-        return IEEEConsts.getHalfInfinity();
-    }
+    public PositiveInfinity: Half 
+        |> IEEEConsts.getHalfInfinity();
     /**
         Represents negative infinity.
     **/
     [special]
-    public get_NegativeInfinity(): Half 
-    {
-        return IEEEConsts.getHalfNegativeInfinity();
-    }
+    public NegativeInfinity: Half 
+        |> IEEEConsts.getHalfNegativeInfinity();
     /**
         Represents not a number.
     **/
     [special]
-    public get_NaN(): Half 
-    {
-        return IEEEConsts.getHalfNaN();
-    }
-    ////
+    public NaN: Half 
+        |> IEEEConsts.getHalfNaN();
 }

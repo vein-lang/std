@@ -35,6 +35,4 @@ public class Testable
         auto n2 = fib(n - 2);
         return n1 + n2; 
     }
-
-    public chain(): self |> this;
 }

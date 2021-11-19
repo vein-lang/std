@@ -41,9 +41,7 @@ public class String : Object
 
     [special]
     public static op_Add(v1: String, v2: String): String
-    {
-        return String.Concat(v1, v2);
-    }
+        |> String.Concat(v1, v2);
     [special]
     public static op_Add(v1: String, v2: Int32): String
     {

@@ -13,13 +13,8 @@ public static class Application
     }
 
     public static Shutdown(msg: String, exitCode: Int32): Void
-    {
-        Application.@_exit(msg, exitCode);
-    }
+        |> Application.@_exit(msg, exitCode);
 
     public static SwitchFlag(key: String, value: Boolean): Void
-    {
-        @_switch_flag(key, value);
-    }
-
+        |> @_switch_flag(key, value);
 }
