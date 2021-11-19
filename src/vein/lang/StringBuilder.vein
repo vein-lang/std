@@ -2,5 +2,39 @@
 
 public class StringBuilder
 {
+    [native("!!buffer")]
+    private __buffer: raw;
+
+
+    public append(value: String): self
+        |> self._append(this, value);
+
+    public append(value: Int64): self
+        |> self._append(this, value);
+    public append(value: Int32): self
+        |> self._append(this, value);
+    public append(value: Int16): self
+        |> self._append(this, value);
+
+    [native("i_call_StringBuilder_append")]
+    private static extern _append(builder: self, s: Object): StringBuilder;
+    [native("i_call_StringBuilder_append")]
+    private static extern _append(builder: self, s: ValueType): StringBuilder;
+
     
+
+    public appendLine(value: String): self
+        |> self._appendLine(this, value);
+
+    public appendLine(value: Int64): self
+        |> self._appendLine(this, value);
+    public appendLine(value: Int32): self
+        |> self._appendLine(this, value);
+    public appendLine(value: Int16): self
+        |> self._appendLine(this, value);
+
+    [native("i_call_StringBuilder_appendLine")]
+    private static extern _appendLine(builder: self, s: Object): StringBuilder;
+    [native("i_call_StringBuilder_appendLine")]
+    private static extern _appendLine(builder: self, s: ValueType): StringBuilder;
 }
