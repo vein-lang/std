@@ -1,6 +1,6 @@
 #space "vein/lang"
 
-public static class Application
+public static class App
 {
     [native("@_get_os_value")]
     private extern static @_get_os_value(): Int32;
