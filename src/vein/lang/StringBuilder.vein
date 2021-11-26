@@ -5,6 +5,16 @@ public class StringBuilder
     [native("!!buffer")]
     private __buffer: raw;
 
+    private _capacity: UInt32;
+
+    public capacity: UInt32 
+        |> this._capacity;
+
+    public new()
+        |> self._init_buffer(this);
+    
+    public delete()
+        |> self._clear_buffer(this);
 
     public append(value: String): self
         |> self._append(this, value);
@@ -16,16 +26,12 @@ public class StringBuilder
     public append(value: Int16): self
         |> self._append(this, value);
 
-    [native("i_call_StringBuilder_append")]
-    private static extern _append(builder: self, s: Object): StringBuilder;
-    [native("i_call_StringBuilder_append")]
-    private static extern _append(builder: self, s: ValueType): StringBuilder;
-
+    public override toString(): String
+        |> self._to_string(this);
     
 
     public appendLine(value: String): self
         |> self._appendLine(this, value);
-
     public appendLine(value: Int64): self
         |> self._appendLine(this, value);
     public appendLine(value: Int32): self
@@ -33,8 +39,18 @@ public class StringBuilder
     public appendLine(value: Int16): self
         |> self._appendLine(this, value);
 
+    [native("i_call_StringBuilder_append")]
+    private static extern _append(builder: self, s: Object): StringBuilder;
+    [native("i_call_StringBuilder_append")]
+    private static extern _append(builder: self, s: ValueType): StringBuilder;
     [native("i_call_StringBuilder_appendLine")]
     private static extern _appendLine(builder: self, s: Object): StringBuilder;
     [native("i_call_StringBuilder_appendLine")]
     private static extern _appendLine(builder: self, s: ValueType): StringBuilder;
+    [native("i_call_StringBuilder_init_buffer")]
+    private static extern _init_buffer(builder: self): Void;
+    [native("i_call_StringBuilder_clear_buffer")]
+    private static extern _clear_buffer(builder: self): Void;
+    [native("i_call_StringBuilder_toString")]
+    private static extern _to_string(buffer: self): String;
 }
