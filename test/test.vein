@@ -6,13 +6,37 @@ public class Testable
 {
     public static master(): Void
     {
+        let str = new StringBuilder();
+
+        str.appendLine("1234");
+        str.appendLine("5678");
+
+        let result = str.toString();
+
+        Out.@_println(result);
+
+
+
+        let str1 = new StringBuilder();
+        let str2 = new StringBuilder();
+        let str3 = new StringBuilder();
+        let str4 = new StringBuilder();
+        let str5 = new StringBuilder();
+        let str6 = new StringBuilder();
+        /*
         auto d = new TimeSpan(45100000000l);
         auto min = d.get_Minutes();
         auto res = min.toString();
         Out.@_println("get_Minutes: " + res);
         fib(10);
         s1();
+        */
+        self.break();
+        fib(25);
     }
+
+    [native("debugger::break")]
+    private static extern break(): Void;
 
     public static fo: Int32 { get; set; }
 
