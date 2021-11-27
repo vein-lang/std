@@ -7,19 +7,19 @@ public class Array
     private _value: ValueType;
 
     [native("!!block")]
-    private _block: Int64;
+    private _block: i64;
 
-    [native("!!size"), readonly]
-    public Length: Int64;
+    [native("!!size")]
+    public readonly Length: i64;
 
-    [native("!!rank"), readonly]
-    public Rank: Int64;
+    [native("!!rank")]
+    public readonly Rank: i64;
 
-    public override toString(): String
+    public override toString(): string
     {
         return "Array";
     }
 
-    //protected extern _indexer_get(index: Int64): Object;
-    //protected extern _indexer_set(index: Int64, o: Object): Void;
+    //protected extern _indexer_get(index: i64): object;
+    //protected extern _indexer_set(index: i64, o: object): void;
 }

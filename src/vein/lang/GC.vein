@@ -3,13 +3,13 @@
 
 public static class GC
 {
-    public static allocated: UInt64
+    public static allocated: u64
         |> self._get_allocated();
-    public static alive_objects: UInt64
+    public static alive_objects: u64
         |> self._get_alive_objects();
 
     [native("i_call_GC_get_allocated")]
-    private static extern _get_allocated(): UInt64;
+    private static extern _get_allocated(): u64;
     [native("i_call_GC_get_alive_objects")]
-    private static extern _get_alive_objects(): UInt64;
+    private static extern _get_alive_objects(): u64;
 }

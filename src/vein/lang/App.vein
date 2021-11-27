@@ -3,18 +3,18 @@
 public static class App
 {
     [native("@_get_os_value")]
-    private extern static @_get_os_value(): Int32;
-    private extern static @_exit(msg: String, exitCode: Int32): Void;
-    private extern static @_switch_flag(key: String, value: Boolean): Void;
+    private extern static @_get_os_value(): i32;
+    private extern static @_exit(msg: string, exitCode: i32): void;
+    private extern static @_switch_flag(key: string, value: bool): void;
 
-    public static GetFrameworkName(): String
+    public static GetFrameworkName(): string
     {
         return "Application.getPlatform()";
     }
 
-    public static Shutdown(msg: String, exitCode: Int32): Void
+    public static Shutdown(msg: string, exitCode: i32): void
         |> Application.@_exit(msg, exitCode);
 
-    public static SwitchFlag(key: String, value: Boolean): Void
+    public static SwitchFlag(key: string, value: bool): void
         |> @_switch_flag(key, value);
 }

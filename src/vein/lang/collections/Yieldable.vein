@@ -4,8 +4,8 @@
 
 public class Yieldable
 {
-    private _current: Object;
-    public Current: Object 
+    private _current: object;
+    public Current: object 
     { 
         get
         {

@@ -1,5 +1,5 @@
 #space "vein/lang"
 
 
-[special, forwarded, native]
-internal struct raw {}
+[special, forwarded, native, alias("raw")]
+internal struct Raw {}

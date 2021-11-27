@@ -4,5 +4,5 @@
 [special, forwarded]
 public class Exception : Object
 {
-    public message: String;
+    public message: string;
 }

@@ -1,7 +1,7 @@
 #space "vein/lang"
 
 
-[special, readonly, forwarded]
+[special, forwarded, alias("u8")]
 public struct Byte : ValueType
 {
     [native("!!value")]

@@ -7,7 +7,6 @@ public struct ValueType
     [native("!!value")]
     __value: raw;
 
-    [virtual]
-    public toString(): String 
+    public virtual toString(): string 
         |> Sys.toString(this);
 }

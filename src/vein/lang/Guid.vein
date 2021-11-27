@@ -4,18 +4,17 @@
 
 public struct Guid : ValueType
 {
-    [readonly]
-    public static Empty: Guid = new Guid();
+    public static readonly Empty: Guid = new Guid();
 
-    private _a: Int32;
-    private _b: Int16;
-    private _c: Int16;
-    private _d: Byte;
-    private _e: Byte;
-    private _f: Byte;
-    private _g: Byte;
-    private _h: Byte;
-    private _i: Byte;
-    private _j: Byte;
-    private _k: Byte;
+    private _a: i32;
+    private _b: i16;
+    private _c: i16;
+    private _d: u8;
+    private _e: u8;
+    private _f: u8;
+    private _g: u8;
+    private _h: u8;
+    private _i: u8;
+    private _j: u8;
+    private _k: u8;
 }

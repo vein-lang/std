@@ -2,41 +2,41 @@
 
 public class TimeSpan
 {
-    public TicksPerDay: Int64 = 864000000000L;
-    public TicksPerHour: Int64 = 36000000000L;
-    public TicksPerMinute: Int64 = 600000000L;
-    public TicksPerSecond: Int64 = 10000000L;
-    public TicksPerMillisecond: Int64 = 10000L;
-    public SecondsPerTick: Float = 1e-07f; 
+    public TicksPerDay: i64 = 864000000000L;
+    public TicksPerHour: i64 = 36000000000L;
+    public TicksPerMinute: i64 = 600000000L;
+    public TicksPerSecond: i64 = 10000000L;
+    public TicksPerMillisecond: i64 = 10000L;
+    public SecondsPerTick: f32 = 1e-07f; 
 
 
-    internal _ticks: Int64;
+    internal _ticks: i64;
 
-    public Ticks: Int64 
+    public Ticks: i64 
         |> _ticks;
 
-    public Days: Int64 
+    public Days: i64 
         |> _ticks / TicksPerDay;
 
-    public Hours: Int64 
+    public Hours: i64 
         |> ((_ticks / TicksPerHour) % 24L);
 
-    public Milliseconds: Int64 
+    public Milliseconds: i64 
         |> ((_ticks / TicksPerMillisecond) % 1000L);
 
-    public Minutes: Int64 
+    public Minutes: i64 
         |> ((_ticks / TicksPerMinute) % 60L);
 
-    public Seconds: Int64 
+    public Seconds: i64 
         |> ((_ticks / TicksPerSecond) % 60L);
 
-    public TotalSeconds: Float 
+    public TotalSeconds: f32 
         |> _ticks * SecondsPerTick;
 
-    public new(ticks: Int64) 
+    public new(ticks: i64) 
         |> this._ticks = ticks;
 
-    public override toString(): String
+    public override toString(): string
     {
         /*
         let day = this.get_Days();

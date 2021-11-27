@@ -3,11 +3,11 @@
 internal static class Sys
 {
     [native("@value2string")]
-    public extern static toString(value: ValueType): String;
+    public extern static toString(value: ValueType): string;
 
     [native("@object2string")]
-    public extern static toString(value: Object): String;
+    public extern static toString(value: object): string;
 
     [native("@queryPerformanceCounter")]
-    public extern static queryPerformanceCounter(): Int64;
+    public extern static queryPerformanceCounter(): i64;
 }

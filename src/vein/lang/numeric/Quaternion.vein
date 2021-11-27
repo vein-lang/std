@@ -6,15 +6,15 @@ public struct Quaternion : ValueType
 {
     /* public static Zero: Quaternion = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f); */
 
-    public X: Float;
-    public Y: Float;
-    public Z: Float;
-    public W: Float;
+    public X: f32;
+    public Y: f32;
+    public Z: f32;
+    public W: f32;
 
-    public IsZero(): Boolean
+    public IsZero(): bool
         |> X + Y + Z + W == 0;
     
-    new (x: Float, y: Float, z: Float, w: Float)
+    new (x: f32, y: f32, z: f32, w: f32)
     {
         X = x;
         Y = y;

@@ -1,7 +1,7 @@
 #space "vein/lang"
 
 
-[special, readonly, forwarded]
+[special, forwarded, alias("f64")]
 public struct Double : ValueType
 {
     [native("!!value")]

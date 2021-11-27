@@ -1,11 +1,11 @@
 #space "vein/lang"
 
-[special, readonly, forwarded]
+[special, forwarded, alias("u64")]
 public struct UInt64 : ValueType
 {
     [native("!!value")]
     private _value: ValueType;
 
-    public const MaxValue: UInt64 = 18446744073709551615;
-    public const MinValue: UInt64 = 0;
+    public const MaxValue: self = 18446744073709551615;
+    public const MinValue: self = 0;
 }

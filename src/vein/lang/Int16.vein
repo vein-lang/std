@@ -1,12 +1,12 @@
 #space "vein/lang"
 
 
-[special, readonly, forwarded]
+[special, forwarded, alias("i16")]
 public struct Int16 : ValueType
 {
     [native("!!value")]
     private _value: ValueType;
 
-    public const MaxValue: Int16 = 32767;
-    public const MinValue: Int16 = -32768;
+    public const MaxValue: i16 = 32767;
+    public const MinValue: i16 = -32768;
 }

@@ -4,12 +4,12 @@
 [special]
 public struct Range : ValueType
 {
-    public Start: UInt32;
-    public End: UInt32;
+    public Start: u32;
+    public End: u32;
 
 
     
-    new (start: UInt32, end: UInt32)
+    new (start: u32, end: u32)
     {
         this.Start = start;
         this.End = end;

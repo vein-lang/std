@@ -3,9 +3,9 @@
 
 public interface IYieldable
 {
-    Current: Object { get; set; }
-    public MoveNext(): Boolean;
-    public Reset(): Void;
+    Current: object { get; set; }
+    public MoveNext(): bool;
+    public Reset(): void;
 }
 
 public interface IYield

@@ -1,55 +1,53 @@
 #space "vein/lang"
 
-[special, forwarded]
+[special, forwarded, alias("string")]
 public class String : Object
 {
     [native("!!value")]
     __value: raw;
-    //[native, getter]
-    //public extern this[index: Int32]: Char;
+    //[native]
+    //public extern this[index: i32]: Char;
     [native]
-    public /*extern*/ Length: Int32;
+    public /*extern*/ Length: i32;
     /*
     // temporary using vm_bridge, todo: rework to using mana-code
     [native("@_fast_end_with_string")]
-    public extern EndsWith(value: Char): Boolean;
+    public extern EndsWith(value: Char): bool;
     // temporary using vm_bridge, todo: rework to using mana-code
     [native("@_fast_start_with_string")]
-    public extern startsWith(value: Char): Boolean;
+    public extern startsWith(value: Char): bool;
 
-    public trim(): String
+    public trim(): string
     {
-        return String.trimEnd(String.trimStart(this));
+        return string.trimEnd(string.trimStart(this));
     }
 
     [native("@_fast_concat_string")]
-    public static extern concat(s2: String, s2: String): String;
+    public static extern concat(s2: string, s2: string): string;
 
     // temporary using vm_bridge, todo: rework to using mana-code
     [native("@_fast_trim_start")]
-    public static extern trimStart(s: String): String;
+    public static extern trimStart(s: string): string;
 
     // temporary using vm_bridge, todo: rework to using mana-code
     [native("@_fast_trim_end")]
-    public static extern trimEnd(s: String): String;
+    public static extern trimEnd(s: string): string;
     */
 
     public override toString(): String
-    {
-        return Sys.toString(this);
-    }
+        |> Sys.toString(this);
 
     [special]
-    public static op_Add(v1: String, v2: String): String
-        |> String.Concat(v1, v2);
+    public static op_Add(v1: string, v2: string): string
+        |> self.Concat(v1, v2);
     [special]
-    public static op_Add(v1: String, v2: Int32): String
+    public static op_Add(v1: string, v2: i32): string
     {
         auto t = v2.toString();
-        return String.Concat(v1, t);
+        return self.Concat(v1, t);
     }
 
 
     [native("i_call_String_Concat")]
-    private extern static Concat(v1: String, v2: String): String;
+    private extern static Concat(v1: string, v2: string): string;
 }

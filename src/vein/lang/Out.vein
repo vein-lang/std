@@ -4,9 +4,9 @@
 public static class Out
 {
     [native("@_println")]
-    public extern static @_println(value: String): Void;
+    public extern static @_println(value: string): void;
 
-    public static print(value: string): Void
+    public static print(value: string): void
         |> Out.@_println(value);
 }
 

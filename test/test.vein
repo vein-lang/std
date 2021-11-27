@@ -4,7 +4,7 @@
 
 public class Testable
 {
-    public static master(): Void
+    public static master(): void
     {
         let str = new StringBuilder();
 
@@ -36,11 +36,11 @@ public class Testable
     }
 
     [native("debugger::break")]
-    private static extern break(): Void;
+    private static extern break(): void;
 
-    public static fo: Int32 { get; set; }
+    public static fo: i32 { get; set; }
 
-    public static s1(): Void
+    public static s1(): void
     {
         auto d = this.get_fo();
         auto lenOfSvackDick = d.toString();
@@ -51,7 +51,7 @@ public class Testable
     }
 
 
-    public static fib(n: Int32): Int32
+    public static fib(n: i32): i32
     {
         if (2 > n) 
             return n;

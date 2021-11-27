@@ -1,5 +1,5 @@
 #space "vein/lang"
 
 
-[special, readonly, forwarded]
+[special, forwarded, alias("void")]
 public struct Void : ValueType { }

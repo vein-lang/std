@@ -5,7 +5,7 @@
 public class BitConvert : Object
 {
     /*
-    public static ToBytes(str: String): byte[]
+    public static Tou8s(str: string): u8[]
     {
         // ...
     }

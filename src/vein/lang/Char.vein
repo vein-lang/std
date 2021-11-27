@@ -1,7 +1,7 @@
 #space "vein/lang"
 
 
-[special, readonly, forwarded]
+[special, forwarded, alias("char")]
 public struct Char : ValueType
 {
     [native("!!value")]
