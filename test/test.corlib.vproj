@@ -1,6 +1,4 @@
-<project sdk="no-runtime">
-    <target>test</target>
-    <packages>
-        <ref name="./../src/corlib.vproj"/>
-    </packages>
-</project>
+sdk: no-runtime
+version: 1.0.0.0-preview
+packages:
+  - ./../src/corlib.vproj
