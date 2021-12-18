@@ -1,4 +1,0 @@
-sdk: no-runtime
-version: 1.0.0.0-preview
-packages:
-  - ./../src/corlib.vproj
