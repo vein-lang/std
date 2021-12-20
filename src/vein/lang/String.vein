@@ -47,7 +47,17 @@ public class String : Object
         return self.Concat(v1, t);
     }
 
+    [special]
+    public static op_NotEqual(v1: string, v2: string): bool
+        |> !self.op_Equal(v1, v2);
+
+    [special]
+    public static op_Equal(v1: string, v2: string): bool
+        |> self.Equal(v1, v2);
+
 
     [native("i_call_String_Concat")]
     private extern static Concat(v1: string, v2: string): string;
+    [native("i_call_String_Equal")]
+    private extern static Equal(v1: string, v2: string): string;
 }
