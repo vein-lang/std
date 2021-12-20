@@ -1,7 +1,3 @@
-#ignore
-
 #space "vein/lang/aspects"
 
-aspect Line(fo: i64)
-{
-}
+aspect Line(fo: i64);
