@@ -5,4 +5,20 @@
 public class Exception : Object
 {
     public message: string;
+
+
+    public override toString(): string
+        |> this.message;
+}
+
+public class NullPointerException : Exception
+{
+    public new()
+        |> this.message = "Null pointer detected";
+}
+
+public class TypeLoadFault : Exception
+{
+    public new(msg: string)
+        |> this.message = msg;
 }
