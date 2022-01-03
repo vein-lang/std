@@ -22,3 +22,10 @@ public class TypeLoadFault : Exception
     public new(msg: string)
         |> this.message = msg;
 }
+
+public class IncorrectCastFault : Exception
+{
+    public new();
+    public new(msg: string)
+        |> this.message = msg;
+}
