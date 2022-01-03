@@ -1,7 +1,7 @@
 sdk: no-runtime
 version: 1.0.0.0-preview
 packages:
-  - ./../src/corlib.vproj
+  - ./../src/std.vproj
 packable: true
 author:
   - name: 'Yuuki Wesp'
