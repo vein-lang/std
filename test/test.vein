@@ -6,57 +6,32 @@ public class Testable
 {
     public static master(): void
     {
-        let str = new StringBuilder();
+        self.dump_deps();
 
-        str.appendLine("1234");
-        str.appendLine("5678");
+        let a = "Foo {0} bar {1}";
+        let o1 = "12";
+        let b2 = "32";
 
-        let result = str.toString();
-
-        Out.@_println(result);
-
+        let result = string.format(a, o1, b2);
+        Out.print(result);
 
 
-        let str1 = new StringBuilder();
-        let str2 = new StringBuilder();
-        let str3 = new StringBuilder();
-        let str4 = new StringBuilder();
-        let str5 = new StringBuilder();
-        let str6 = new StringBuilder();
-        /*
-        auto d = new TimeSpan(45100000000l);
-        auto min = d.get_Minutes();
-        auto res = min.toString();
-        Out.@_println("get_Minutes: " + res);
-        fib(10);
-        s1();
-        */
-        self.break();
-        fib(25);
+        let fn1 = nameof(self.fib);
+        let fn2 = nameof(this.fib);
+        let fn3 = nameof(fib);
     }
 
-    [native("debugger::break")]
+    [native("vein::ishtar::debugger::break")]
     private static extern break(): void;
-
-    public static fo: i32 { get; set; }
-
-    public static s1(): void
-    {
-        auto d = this.get_fo();
-        auto lenOfSvackDick = d.toString();
-        Out.@_println("Svack dick size: " + lenOfSvackDick);
-        auto result = fib(10);
-        auto res1 = result.toString();
-        Out.@_println("fib result: " + res1);
-    }
-
+    [native("vein::ishtar::graph::bump")]
+    private static extern dump_deps(): void;
 
     public static fib(n: i32): i32
     {
         if (2 > n) 
             return n;
-        auto n1 = fib(n - 1);
-        auto n2 = fib(n - 2);
+        let n1 = fib(n - 1);
+        let n2 = fib(n - 2);
         return n1 + n2; 
     }
 }
