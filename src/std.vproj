@@ -1,5 +1,5 @@
 name: std
-version: '0.12.9'
+version: '0.12.11'
 license: MIT
 packable: true
 description: A standard core library for Ishtar VM and Vein Lang
