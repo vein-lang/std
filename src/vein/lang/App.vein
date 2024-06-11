@@ -2,9 +2,11 @@
 
 public static class App
 {
-    [native("@_get_os_value")]
+    [native("__internal__", "@_get_os_value")]
     private extern static @_get_os_value(): i32;
+    [native("__internal__", "@_exit")]
     private extern static @_exit(msg: string, exitCode: i32): void;
+    [native("__internal__", "@_switch_flag")]
     private extern static @_switch_flag(key: string, value: bool): void;
 
     public static GetFrameworkName(): string

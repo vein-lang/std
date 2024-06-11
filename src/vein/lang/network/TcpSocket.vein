@@ -11,13 +11,13 @@ public class TcpSocket
     private _connected: bool;
 
     /*
-    [native("@_sock_listen")]
+    [native("__internal__", "@_sock_listen")]
     public static extern _sock_listen(handle: ValueType, cq: i32): i32;
 
-    [native("@_sock_send")]
+    [native("__internal__", "@_sock_send")]
     public static extern _sock_send(handle: ValueType, buffer: u8[], len: i32): ValueType;
 
-    [native("@_sock_create")]
+    [native("__internal__", "@_sock_create")]
     public static extern _create_native_socket(): ValueType;
     */
 

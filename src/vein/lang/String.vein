@@ -33,10 +33,10 @@ public class String : Object
 
 
     // temporary using vm_bridge, todo: rework to using vein-code
-    [native("i_call_String_Concat")]
+    [native("__internal__", "i_call_String_Concat")]
     private extern static Concat(v1: string, v2: string): string;
     // temporary using vm_bridge, todo: rework to using vein-code
-    [native("i_call_String_Equal")]
+    [native("__internal__", "i_call_String_Equal")]
     private extern static Equal(v1: string, v2: string): string;
 
 
@@ -62,7 +62,7 @@ public class String : Object
 
 
     // temporary using vm_bridge, todo: rework to using vein-code
-    [native("i_call_String_fmt")]
+    [native("__internal__", "i_call_String_fmt")]
     private static extern _fmt(t: string, arr: Array): string;
 
 }

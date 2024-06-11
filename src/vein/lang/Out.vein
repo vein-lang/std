@@ -3,7 +3,7 @@
 
 public static class Out
 {
-    [native("@_println")]
+    [native("__internal__", "@_println")]
     public extern static @_println(value: string): void;
 
     public static print(value: string): void
